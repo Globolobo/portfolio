@@ -12,7 +12,7 @@ import { HeroDetailComponent } from './hero-detail.component';
     <h1>{{name}}</h1>
     <h2>{{title}}</h2>
   `,
-    styleUrls: ['app/app.component.css'],
+    styleUrls: ['public/css/styles.css'],
     directives: [ROUTER_DIRECTIVES],
     providers: [
         ROUTER_PROVIDERS,
