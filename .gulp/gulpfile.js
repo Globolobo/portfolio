@@ -17,6 +17,9 @@ gulp.task('styles', function () {
     .pipe(gulp.dest('../public/styles/css'));
 });
 
-gulp.task('default',function(){
-  gulp.start('styles');
+gulp.task('watch', function() {
+  gulp.watch(paths.scss, ['styles']);
+});
+
+gulp.task('start',['styles','watch'],function(){
 });

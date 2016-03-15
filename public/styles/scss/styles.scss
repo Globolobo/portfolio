@@ -3,35 +3,12 @@
 @import "helpers/fade-in";
 $fade-in-time: 5s;
 
-h1 {
-  color: white;
-  font-family: "Century Gothic", Arial, Helvetica, sans-serif;
-  font-weight: lighter;
+.fade-in{
   -webkit-animation: fadein $fade-in-time;
   -moz-animation: fadein $fade-in-time;
   -ms-animation: fadein $fade-in-time;
   -o-animation: fadein $fade-in-time;
   animation: fadein $fade-in-time;
-  position: fixed;
-  left: 50%;
-  top: 45%;
-  transform: translate(-50%, -45%);
-}
-
-h2 {
-  color: #444;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: lighter;
-  font-style: italic;
-  -webkit-animation: fadein $fade-in-time;
-  -moz-animation: fadein $fade-in-time;
-  -ms-animation: fadein $fade-in-time;
-  -o-animation: fadein $fade-in-time;
-  animation: fadein $fade-in-time;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 body {
