@@ -3,7 +3,7 @@ var gulp = require('gulp'),
   neat = require('node-neat').includePaths;
 
 var paths = {
-  scss: '../public/styles/scss/**/*.scss'
+  scss: '../app/**/*.scss'
 };
 
 gulp.task('styles', function () {
@@ -14,7 +14,7 @@ gulp.task('styles', function () {
       quite: true
     }))
     .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('../public/styles/css'));
+    .pipe(gulp.dest('../public/css'));
 });
 
 gulp.task('watch', function() {
