@@ -1,6 +1,15 @@
+@import "bourbon";
+@import "neat";
+@import "../../styles/styles";
+
+$github-delay: $fade-in-time + 300ms;
+$email-delay: $github-delay + 300ms;
+$linkedin-delay: $email-delay + 300ms;
+
 h1 {
   color: white;
   font-family: "Century Gothic", Arial, Helvetica, sans-serif;
+  font-size: golden-ratio(14px,  1);
   font-weight: lighter;
   position: fixed;
   left: 50%;
@@ -10,7 +19,8 @@ h1 {
 
 h2 {
   color: #444;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: $helvetica;
+  font-size: golden-ratio(14px,  1);
   font-weight: lighter;
   font-style: italic;
   position: fixed;
@@ -19,10 +29,21 @@ h2 {
   transform: translate(-50%, -50%);
 }
 .contact-me-container{
+  @include shift(10);
+  @include span-columns(2);
 
+  .contact-me-svg{
+    float:right;
+    width: 3vw;
+    height: 3vw;
+    padding: .5vw;
+    fill: #FFFFFF;
+  }
+  .linkedin-svg{
+  }
+  .email-svg{
+  }
+  .github-svg{
+  }
 }
-.contact-me-svg{
-  width: 5vw;
-  height: 5vh;
-  fill: #FFFFFF;
-}
+
