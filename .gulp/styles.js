@@ -3,23 +3,25 @@ var gulp = require('gulp'),
 	neat = require('node-neat').includePaths;
 
 var paths = {
-	scss: '../app/**/*.scss'
+	scss: './app/**/*.scss',
+	css: './public/css'
 };
+var sassTaskName = 'sass';
 
-gulp.task('sass', function () {
+gulp.task(sassTaskName, function () {
 	gulp.src(paths.scss)
 		.pipe(sass({
 			includePaths: require('node-neat').includePaths,
 			style: 'compressed',
-			quite: true
+			quiet: true
 		}))
 		.pipe(sass().on('error', sass.logError))
-		.pipe(gulp.dest('../public/css'));
+		.pipe(gulp.dest(paths.css));
 });
 
 gulp.task('watch', function() {
-	gulp.watch(paths.scss, ['styles']);
+	gulp.watch(paths.scss, [sassTaskName]);
 });
 
-gulp.task('styles',['sass','watch'],function(){
+gulp.task('styles',[sassTaskName,'watch'],function(){
 });
