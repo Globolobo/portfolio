@@ -4,11 +4,17 @@
 $fade-in-time: 5s;
 
 .fade-in{
-  -webkit-animation: fadein $fade-in-time;
-  -moz-animation: fadein $fade-in-time;
-  -ms-animation: fadein $fade-in-time;
-  -o-animation: fadein $fade-in-time;
+  opacity:0;
+  opacity: 1 \9; /*just in case ie*/
+  -webkit-animation: fadein ease-in $fade-in-time;
+  -moz-animation: fadein ease-in $fade-in-time;
+  -ms-animation: fadein ease-in $fade-in-time;
+  -o-animation: fadein ease-in $fade-in-time;
   animation: fadein $fade-in-time;
+
+  -webkit-animation-fill-mode:forwards;
+  -moz-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
 }
 
 body {
