@@ -1,4 +1,4 @@
-import {Hero} from './../hero';
+/*import {Hero} from './../hero';
 import {HEROES} from './../mock-heroes';
 import {Injectable} from '../../node_modules/angular2/core.d';
 
@@ -19,3 +19,4 @@ export class HeroService {
         );
     }
 }
+*/
