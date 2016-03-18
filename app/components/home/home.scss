@@ -1,10 +1,8 @@
-@import "bourbon";
-@import "neat";
 @import "../../styles/styles";
 
-$github-delay: $fade-in-time + 300ms;
-$email-delay: $github-delay + 300ms;
-$linkedin-delay: $email-delay + 300ms;
+$github-delay: $fade-in-time;
+$email-delay: $github-delay + 200ms;
+$linkedin-delay: $email-delay + 200ms;
 
 h1 {
   color: white;
@@ -28,22 +26,25 @@ h2 {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.contact-me-container{
+.contact-me-container {
   @include shift(10);
   @include span-columns(2);
-
-  .contact-me-svg{
+  //added something
+  .contact-me-svg {
     float:right;
     width: 3vw;
     height: 3vw;
     padding: .5vw;
     fill: #FFFFFF;
   }
-  .linkedin-svg{
+  .linkedin-svg {
+    animation-delay: $linkedin-delay;
   }
-  .email-svg{
+  .email-svg {
+    animation-delay: $email-delay;
   }
-  .github-svg{
+  .github-svg {
+    animation-delay: $github-delay;
   }
 }
 
