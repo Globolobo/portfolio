@@ -19,8 +19,16 @@
     <!-- 2. Configure SystemJS -->
     <script>
         System.config({
+            paths: {
+                '/*': '/app/*',
+                'ng2-parallax/*': '/node_modules/ng2-parallax/*' // <--- add this
+            },
             packages: {
                 'public/js': {
+                    format: 'register',
+                    defaultExtension: 'js'
+                },
+                '/node_modules/ng2-parallax': {
                     format: 'register',
                     defaultExtension: 'js'
                 }
